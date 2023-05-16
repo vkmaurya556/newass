@@ -116,7 +116,7 @@
                     formData.append(x, this.form[x]);
                 }
                 $.ajax({
-                    url: '/api/addbusiness',
+                    url: this.base_url +'/api/addbusiness',
                     dataType: 'json', // what to expect back from the PHP script, if anything
                     cache: false,
                     contentType: false,
