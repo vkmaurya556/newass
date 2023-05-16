@@ -291,7 +291,7 @@
         methods: {
 
             getRecords: function() {
-                $.post("/api/businesslist").then(res => {
+                $.post(base_url+"/api/businesslist").then(res => {
                     if (res.success) {
                         res.data.forEach(function(v, i) {
                             res.data[i].rating = (parseFloat(v.total_rating) / parseInt(v.total_rated_users)).toFixed(2);
