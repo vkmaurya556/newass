@@ -295,7 +295,7 @@
                     if (res.success) {
                         res.data.forEach(function(v, i) {
                             res.data[i].rating = (parseFloat(v.total_rating) / parseInt(v.total_rated_users)).toFixed(2);
-                            if (res.data[i].rating == NaN) {
+                            if (res.data[i].rating == "NaN") {
                                 res.data[i].rating = 0;
                             }
                         })
