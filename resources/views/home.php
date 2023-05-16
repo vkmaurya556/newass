@@ -124,7 +124,7 @@
                                 <span class="star on" v-for="item in row.rating"></span>
                                 <!-- <span class="star half"></span> -->
                                 <span class="star" v-for="item in (5-row.rating)"></span>
-                                
+
 
                             </div>
 
@@ -291,7 +291,7 @@
         methods: {
 
             getRecords: function() {
-                $.post(this.base_url+"/api/businesslist").then(res => {
+                $.post(this.base_url + "/api/businesslist").then(res => {
                     if (res.success) {
                         res.data.forEach(function(v, i) {
                             res.data[i].rating = (parseFloat(v.total_rating) / parseInt(v.total_rated_users)).toFixed(2);
@@ -301,7 +301,7 @@
                 });
             },
             login: function() {
-                $.post("/api/userlogin", this.login_frm).then(res => {
+                $.post(this.base_url + "/api/userlogin", this.login_frm).then(res => {
                     console.log(res);
                     if (res.success == true) {
                         this.login_username = res.name;
@@ -322,7 +322,7 @@
                     this.signup_error = "Password Not Matched";
                     return;
                 }
-                $.post("/api/usersignup", this.signup_frm).then(res => {
+                $.post(this.base_url + "/api/usersignup", this.signup_frm).then(res => {
                     console.log(res);
                     if (res.success == true) {
                         this.login_username = res.name;
@@ -349,7 +349,7 @@
 
             },
             comment: function() {
-                $.post("/api/userrating", {
+                $.post(this.base_url + "/api/userrating", {
                     ...this.rating_frm,
                     login_token: this.login_token
                 }).then(res => {
