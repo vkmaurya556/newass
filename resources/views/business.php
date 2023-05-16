@@ -140,7 +140,7 @@
 
             },
             getRecords: function() {
-                $.post(base_url + "/api/businesslist").then(res => {
+                $.post(this.base_url + "/api/businesslist").then(res => {
                     if (res.success) {
                         this.data = res.data;
 
