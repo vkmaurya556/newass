@@ -33,14 +33,14 @@
 
                                 <button class="btn btn-primary btn-lg btn-block w-100 mt-5" type="submit">Login</button>
 
-                                <hr class="my-4">
+                                <!-- <hr class="my-4">
 
                                 <div class="d-flex">
 
                                     <button class="btn btn-lg btn-block btn-danger rounded-0 w-100" style="" type="submit"><i class="fab fa-google me-2"></i> Forget Password</button>
                                     <button class="btn btn-lg btn-block btn-warning rounded-0 w-100" style="" type="submit"><i class="fab fa-facebook-f me-2"></i>New User</button>
 
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
